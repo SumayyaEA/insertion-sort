@@ -1,9 +1,9 @@
 #include<stdio.h>
 
-int sort(int *a)
+int sort(int *a,int size)
 {
 int i,j,temp;
-for(i=0;i<7;i++)
+for(i=0;i<size;i++)
 {
 	j=i;
 	while(j>0 && a[j-1]>a[j])
@@ -29,10 +29,10 @@ return size;
 int main()
 {
 int i;
-int a[7]={4,23,43,38,15,10,30};
-
-sort(a);
-for(i=0;i<7;i++)
+int a[10];
+int size=read(a);
+sort(a,size);
+for(i=0;i<size;i++)
 printf("%d\t",a[i]);
 printf("\n");
 return 0;
